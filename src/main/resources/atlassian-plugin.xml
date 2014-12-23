@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="jira-simple-jql-function"/>
+  <!-- add our web resources -->
+  <web-resource key="jira-simple-jql-function-resources" name="jira-simple-jql-function Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <resource type="download" name="jira-simple-jql-function.css" location="/css/jira-simple-jql-function.css"/>
+    <resource type="download" name="jira-simple-jql-function.js" location="/js/jira-simple-jql-function.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>jira-simple-jql-function</context>
+  </web-resource>
+  <!-- publish our component -->
+  <component key="myPluginComponent" class="com.example.plugins.tutorial.jira.MyPluginComponentImpl" public="true">
+    <interface>com.example.plugins.tutorial.jira.MyPluginComponent</interface>
+  </component>
+  <!-- import from the product container -->
+  <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
+  <jql-function name="Member Roles Function" i18n-name-key="member-roles-function.name" key="member-roles-function" class="com.example.plugins.tutorial.jira.sql.MemberRolesFunction">
+	  <description key="member-roles-function.description">The Member Roles Function Plugin</description>
+	  <fname>memberRoles</fname>
+	  <list>true</list>
+  </jql-function>
+</atlassian-plugin>
