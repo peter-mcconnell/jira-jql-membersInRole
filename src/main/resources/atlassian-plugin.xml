@@ -19,12 +19,9 @@
     <context>jira-simple-jql-function</context>
   </web-resource>
   <!-- publish our component -->
-  <component key="myPluginComponent" class="com.example.plugins.tutorial.jira.MyPluginComponentImpl" public="true">
-    <interface>com.example.plugins.tutorial.jira.MyPluginComponent</interface>
-  </component>
   <!-- import from the product container -->
   <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
-  <jql-function name="Member Roles Function" i18n-name-key="member-roles-function.name" key="member-roles-function" class="com.example.plugins.tutorial.jira.sql.MemberRolesFunction">
+  <jql-function name="Member Roles Function" i18n-name-key="member-roles-function.name" key="member-roles-function" class="com.petermcconnell.plugins.jql.jira.sql.MemberRolesFunction">
 	  <description key="member-roles-function.description">The Member Roles Function Plugin</description>
 	  <fname>memberRoles</fname>
 	  <list>true</list>

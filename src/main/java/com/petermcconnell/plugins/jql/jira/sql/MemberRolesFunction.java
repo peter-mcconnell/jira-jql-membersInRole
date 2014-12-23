@@ -1,4 +1,4 @@
-package com.example.plugins.tutorial.jira.sql;
+package com.petermcconnell.plugins.jql.jira.sql;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
