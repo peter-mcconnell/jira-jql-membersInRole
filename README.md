@@ -1,3 +1,15 @@
+#JIRA Plugin | Members in Role
+
+This plugin was designed to allow you to use a projects role as a search parameter.
+
+This has been built to work on JIRA 6.1.7
+
+###Example JQL Usage
+
+`project = "BETA" AND assignee IN membersInRole("BETA", "Developers")`
+
+###JIRA Plugin creation output
+
 You have successfully created an Atlassian Plugin!
 
 Here are the SDK commands you'll use immediately:

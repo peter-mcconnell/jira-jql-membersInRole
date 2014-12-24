@@ -2,15 +2,15 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example.plugins.tutorial.jira</groupId>
-    <artifactId>jira-simple-jql-function</artifactId>
+    <groupId>com.petermcconnell.plugins.jql.jira</groupId>
+    <artifactId>members-in-role-function</artifactId>
     <version>1.0-SNAPSHOT</version>
     <organization>
-        <name>rehabstudio</name>
-        <url>https://rehabstudio.com/</url>
+        <name>petermcconnell</name>
+        <url>https://www.petermcconnell.com/</url>
     </organization>
-    <name>jira-simple-jql-function</name>
-    <description>Adds a custom JQL function named memberRoles to JIRA.</description>
+    <name>members-in-role-function</name>
+    <description>The Members in Role Function Plugin</description>
     <packaging>atlassian-plugin</packaging>
     <dependencies>
         <dependency>
@@ -19,7 +19,7 @@
             <version>${jira.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Add dependency on jira-core if you want access to JIRA implementation classes as well as the sanctioned API. -->
+        <!-- Add dependency on jira-co  if you want access to JIRA implementation classes as well as the sanctioned API. -->
         <!-- This is not normally recommended, but may be required eg when migrating a plugin originally developed against JIRA 4.x -->
         <!--
         <dependency>

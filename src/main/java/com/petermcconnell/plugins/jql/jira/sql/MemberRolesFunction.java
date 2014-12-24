@@ -37,9 +37,7 @@ public class MemberRolesFunction extends AbstractJqlFunction
     private static final Logger log = LoggerFactory.getLogger(MemberRolesFunction.class);
     private final ProjectManager projectManager;
     private final ProjectRoleManager projectRoleManager;
-    public MemberRolesFunction( 
-        ProjectManager projectManager, 
-        ProjectRoleManager projectRoleManager)
+    public MemberRolesFunction(ProjectManager projectManager, ProjectRoleManager projectRoleManager)
     {
         this.projectManager = projectManager;
         this.projectRoleManager = projectRoleManager;
