@@ -4,6 +4,13 @@ This plugin was designed to allow you to use a projects role as a search paramet
 
 This has been built to work on JIRA 6.1.7
 
+###Syntax
+
+membersInRole(`<PROJECT_KEY>`, `<PROJECT_ROLE>`)
+
+- PROJECT_KEY (String). The KEY for the project that the role exists in
+- PROJECT_ROLE (String). The ROLE that the user exists in
+
 ###Example JQL Usage
 
 `project = "BETA" AND assignee IN membersInRole("BETA", "Developers")`
